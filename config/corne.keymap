@@ -29,6 +29,8 @@
 
 / {
 
+    chosen { zmk,matrix_transform = &five_column_transform; };
+
     behaviors {
         hml: home_row_mod_left {
                     compatible = "zmk,behavior-hold-tap";
