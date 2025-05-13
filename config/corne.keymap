@@ -119,10 +119,10 @@
 
         default_layer {
             bindings = <
-  &kp DE_Q            &kp DE_W            &kp DE_F             &kp DE_P           &kp DE_B        &kp DE_J          &kp DE_L               &kp DE_U              &kp DE_Y             &kp DE_DQT
-  &hml LEFT_GUI DE_A  &hml LEFT_ALT DE_R  &hml LCTRL DE_S      &hml LEFT_SHIFT F  &kp DE_G        &kp DE_M          &hmr RIGHT_SHIFT DE_N  &hmr RCTRL DE_E       &hmr RIGHT_ALT DE_I  &hmr LEFT_GUI DE_O
-  &kp DE_Z            &kp DE_X            &kp DE_C             &kp DE_D           &kp DE_V        &kp DE_K          &kp DE_H               &kp DE_COMMA          &kp DE_DOT           &kp DE_QMARK
-                               &lt MEDIA DE_ESCAPE_CHARACTER  &lt NAV DE_SPACE        &lt MOUSE TAB            &lt FUN ENTER   &lt NUM BACKSPACE            &lt SYM DELETE
+  &kp DE_Q            &kp DE_W            &kp DE_F             &kp DE_P              &kp DE_B        &kp DE_J          &kp DE_L               &kp DE_U              &kp DE_Y             &kp DE_DQT
+  &hml LEFT_GUI DE_A  &hml LEFT_ALT DE_R  &hml LCTRL DE_S      &hml LEFT_SHIFT DE_T  &kp DE_G        &kp DE_M          &hmr RIGHT_SHIFT DE_N  &hmr RCTRL DE_E       &hmr RIGHT_ALT DE_I  &hmr LEFT_GUI DE_O
+  &kp DE_Z            &kp DE_X            &kp DE_C             &kp DE_D              &kp DE_V        &kp DE_K          &kp DE_H               &kp DE_COMMA          &kp DE_DOT           &kp DE_QMARK
+                                          &lt MEDIA ESCAPE     &lt NAV SPACE         &lt MOUSE TAB   &lt FUN ENTER     &lt NUM BACKSPACE      &lt SYM DELETE
             >;
         };
 
