@@ -57,6 +57,16 @@
                     hold-trigger-key-positions = <KEYS_L>; // List of keys on the left side of the keyboard
                     hold-trigger-on-release;
                 };
+
+        lt_slow: layer_tap {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <280>;
+                    quick-tap-ms = <300>;
+                    bindings = <&mo>, <&kp>;
+                    display-name = "Layer-Tap";
+                };
     };
 
     combos {
@@ -119,10 +129,10 @@
 
         default_layer {
             bindings = <
-  &kp DE_Q            &kp DE_W            &kp DE_F             &kp DE_P              &kp DE_B        &kp DE_J          &kp DE_L               &kp DE_U              &kp DE_Y              &kp DE_DQT
-  &hml LEFT_GUI DE_A  &hml LEFT_ALT DE_R  &hml LCTRL DE_S      &hml LEFT_SHIFT DE_T  &kp DE_G        &kp DE_M          &hmr RIGHT_SHIFT DE_N  &hmr RCTRL DE_E       &hmr LEFT_ALT DE_I    &hmr LEFT_GUI DE_O
-  &kp DE_Z            &kp DE_X            &kp DE_C             &kp DE_D              &kp DE_V        &kp DE_K          &kp DE_H               &kp DE_COMMA          &hmr RIGHT_ALT DE_DOT &kp DE_QMARK
-                                          &lt MEDIA ESCAPE     &lt NAV SPACE         &lt MOUSE TAB   &lt FUN ENTER     &lt NUM BACKSPACE      &lt SYM DELETE
+  &kp DE_Q            &kp DE_W            &kp DE_F             &kp DE_P              &kp DE_B             &kp DE_J          &kp DE_L               &kp DE_U              &kp DE_Y              &kp DE_DQT
+  &hml LEFT_GUI DE_A  &hml LEFT_ALT DE_R  &hml LCTRL DE_S      &hml LEFT_SHIFT DE_T  &kp DE_G             &kp DE_M          &hmr RIGHT_SHIFT DE_N  &hmr RCTRL DE_E       &hmr LEFT_ALT DE_I    &hmr LEFT_GUI DE_O
+  &kp DE_Z            &kp DE_X            &kp DE_C             &kp DE_D              &kp DE_V             &kp DE_K          &kp DE_H               &kp DE_COMMA          &hmr RIGHT_ALT DE_DOT &kp DE_QMARK
+                                          &lt MEDIA ESCAPE     &lt NAV SPACE         &lt_slow MOUSE TAB   &lt_slow FUN ENTER     &lt NUM BACKSPACE      &lt SYM DELETE
             >;
         };
 
