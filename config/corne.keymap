@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
- #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
+ #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
  #define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // default: 10
 
 #include <behaviors.dtsi>
@@ -28,6 +28,13 @@
 &lt {
     quick-tap-ms = <200>;
     tapping-term-ms = <170>;
+};
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <800>; // Time to reach max speed in milliseconds, default is 300ms
+    acceleration-exponent = <1>;
 };
 
 / {
