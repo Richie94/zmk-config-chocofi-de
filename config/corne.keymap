@@ -81,7 +81,7 @@
                 flavor = "tap-preferred";
                 tapping-term-ms = <200>;
                 quick-tap-ms = <0>;
-                bindings = <&ctrl_shift_v_macro>, <&ctrl_v_macro>;
+                bindings = <&ctl_s_v>, <&ctl_v>;
             };
 
     };
