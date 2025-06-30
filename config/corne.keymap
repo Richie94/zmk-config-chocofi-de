@@ -79,8 +79,8 @@
             compatible = "zmk,behavior-key-pressed-released";
             #binding-cells = <0>;
             bindings = <&none>, <&none>;  // Diese werden nicht verwendet, sind aber erforderlich
-            pressed-bindings = <&ctrl_v_macro>;  // Wird bei kurzem Tastendruck ausgeführt
-            released-bindings = <&ctrl_shift_v_macro>;  // Wird bei langem Halten ausgeführt
+            pressed-bindings = <&ctl_v>;  // Wird bei kurzem Tastendruck ausgeführt
+            released-bindings = <&ctl_s_v>;  // Wird bei langem Halten ausgeführt
             hold-trigger-key-positions = <0>;  // Gilt für alle Tasten
             hold-trigger-ms = <200>;  // Haltezeit bis zum Auslösen des released-binding
         };
