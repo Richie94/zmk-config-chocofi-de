@@ -91,7 +91,7 @@
         // some programs seem to require a delay before pasting
         ctl_v: ctrl-v-macro {
           compatible = "zmk,behavior-macro";
-          label = "Ctrl V Macro";
+          #binding-cells = <0>;
           bindings = <&macro_press &kp LCTRL>
                   , <&macro_tap &kp V>
                   , <&macro_release &kp LCTRL>;
@@ -99,7 +99,7 @@
 
         ctl_c: ctrl-c-macro {
           compatible = "zmk,behavior-macro";
-          label = "Ctrl C Macro";
+          #binding-cells = <0>;
           bindings = <&macro_press &kp LCTRL>
                     , <&macro_tap &kp C>
                     , <&macro_release &kp LCTRL>;
@@ -107,7 +107,7 @@
 
         ctl_x: ctrl-x-macro {
           compatible = "zmk,behavior-macro";
-          label = "Ctrl X Macro";
+          #binding-cells = <0>;
           bindings = <&macro_press &kp LCTRL>
                     , <&macro_tap &kp X>
                     , <&macro_release &kp LCTRL>;
@@ -115,7 +115,7 @@
 
         ctl_s_v: ctrl-shift-v-macro {
           compatible = "zmk,behavior-macro";
-          label = "Ctrl Shift V Macro";
+          #binding-cells = <0>;
           bindings = <&macro_press &kp LCTRL &kp LSHIFT>
                     , <&macro_tap &kp V>
                     , <&macro_release &kp LCTRL &kp LSHIFT>;
