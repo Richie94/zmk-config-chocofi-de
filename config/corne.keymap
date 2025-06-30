@@ -78,47 +78,37 @@
 
     macros {
 
-    // some programs seem to require a delay before pasting
+        // some programs seem to require a delay before pasting
         ctl_v: ctrl-v-macro {
           compatible = "zmk,behavior-macro";
           label = "Ctrl V Macro";
-          bindings = <
-            &kp LCTRL
-            &wait-ms 10
-            &kp V
-          >;
+          bindings = <&macro_press &kp LCTRL>
+                  , <&macro_tap &kp V>
+                  , <&macro_release &kp LCTRL>;
         };
 
         ctl_c: ctrl-c-macro {
           compatible = "zmk,behavior-macro";
           label = "Ctrl C Macro";
-          bindings = <
-            &kp LCTRL
-            &wait-ms 10
-            &kp C
-          >;
+          bindings = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp C>
+                    , <&macro_release &kp LCTRL>;
         };
 
         ctl_x: ctrl-x-macro {
           compatible = "zmk,behavior-macro";
           label = "Ctrl X Macro";
-          bindings = <
-            &kp LCTRL
-            &wait-ms 10
-            &kp X
-          >;
+          bindings = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp X>
+                    , <&macro_release &kp LCTRL>;
         };
 
         ctl_s_v: ctrl-shift-v-macro {
           compatible = "zmk,behavior-macro";
           label = "Ctrl Shift V Macro";
-          bindings = <
-            &kp LCTRL
-            &wait-ms 10
-            &kp LSHIFT
-            &wait-ms 10
-            &kp V
-          >;
+          bindings = <&macro_press &kp LCTRL &kp LSHIFT>
+                    , <&macro_tap &kp V>
+                    , <&macro_release &kp LCTRL &kp LSHIFT>;
         };
       };
 
