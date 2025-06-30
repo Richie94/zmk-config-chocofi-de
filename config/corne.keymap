@@ -75,15 +75,15 @@
                     display-name = "Layer-Tap";
                 };
 
-        v_macro_behavior: v_macro {
-            compatible = "zmk,behavior-key-pressed-released";
-            #binding-cells = <0>;
-            bindings = <&none>, <&none>;  // Diese werden nicht verwendet, sind aber erforderlich
-            pressed-bindings = <&ctl_v>;  // Wird bei kurzem Tastendruck ausgeführt
-            released-bindings = <&ctl_s_v>;  // Wird bei langem Halten ausgeführt
-            hold-trigger-key-positions = <0>;  // Gilt für alle Tasten
-            hold-trigger-ms = <200>;  // Haltezeit bis zum Auslösen des released-binding
-        };
+        v_hold_tap: v_hold_tap {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <0>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <0>;
+                bindings = <&ctrl_shift_v_macro>, <&ctrl_v_macro>;
+            };
+
     };
 
     macros {
@@ -191,9 +191,9 @@
 
         nav_layer {
             bindings = <
-                &none           &none       &none       &none                 &none           &none    &none       &kp UP        &none       &none
-                &kp LGUI        &kp LALT    &kp LCTRL   &kp LSHFT             &none           &none    &kp LEFT    &kp DOWN      &kp RIGHT   &none
-                &kp LC(LA(N7))  &kp LC(B)   &ctl_c      &v_macro_behavior     &ctl_x          &kp INS  &kp HOME    &kp PG_DN     &kp PG_UP   &kp END
+                &none           &none       &none       &none             &none           &none    &none       &kp UP        &none       &none
+                &kp LGUI        &kp LALT    &kp LCTRL   &kp LSHFT         &none           &none    &kp LEFT    &kp DOWN      &kp RIGHT   &none
+                &kp LC(LA(N7))  &kp LC(B)   &ctl_c      &v_hold_tap       &ctl_x          &kp INS  &kp HOME    &kp PG_DN     &kp PG_UP   &kp END
                                         &none       &trans           &none                          &trans    &trans      &trans
             >;
         };
