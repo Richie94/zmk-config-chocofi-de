@@ -75,13 +75,13 @@
                     display-name = "Layer-Tap";
                 };
 
-        macro_mt: macro_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&macro>, <&macro>;
+        v_macro_behavior: v_macro {
+            compatible = "zmk,behavior-key-pressed-released";
+            #binding-cells = <0>;
+            bindings = <&kt_press>, <&kt_release>;
+            pressed-bindings = <&ctl_v>;
+            released-bindings = <&ctl_s_v>;
+            hold-trigger-ms = <200>; // Nach dieser Zeit wird das hold-Verhalten ausgelöst
         };
     };
 
@@ -190,9 +190,9 @@
 
         nav_layer {
             bindings = <
-                &none           &none       &none       &none                       &none           &none    &none       &kp UP        &none       &none
-                &kp LGUI        &kp LALT    &kp LCTRL   &kp LSHFT                   &none           &none    &kp LEFT    &kp DOWN      &kp RIGHT   &none
-                &kp LC(LA(N7))  &kp LC(B)   &ctl_c      &macro_mt ctl_s_v ctl_v     &ctl_x          &kp INS  &kp HOME    &kp PG_DN     &kp PG_UP   &kp END
+                &none           &none       &none       &none                 &none           &none    &none       &kp UP        &none       &none
+                &kp LGUI        &kp LALT    &kp LCTRL   &kp LSHFT             &none           &none    &kp LEFT    &kp DOWN      &kp RIGHT   &none
+                &kp LC(LA(N7))  &kp LC(B)   &ctl_c      &v_macro_behavior     &ctl_x          &kp INS  &kp HOME    &kp PG_DN     &kp PG_UP   &kp END
                                         &none       &trans           &none                          &trans    &trans      &trans
             >;
         };
